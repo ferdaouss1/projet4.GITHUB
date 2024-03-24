@@ -1,0 +1,279 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+a{
+    color: #fff;
+}
+header{
+    
+    display:flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: black;
+    /* z-index: 100;
+   position: fixed; */
+    
+
+}
+header div .nav{
+    background: transparent;
+}
+
+
+header a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: large;
+    position: relative;
+}
+header a::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin:right;
+    transition:transform 300ms ease-in;
+}
+header a:hover::after{
+    transform: scaleX(1);
+    transform-origin:left ;
+} 
+
+/* section{height: 90vh;}
+
+.fondation{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    width: 70%;
+    margin-left: 12em;
+    position: relative;
+
+
+
+}
+
+
+.lipstick div{
+    position: relative;
+} */
+/* span{
+    font-size:7rem;
+    font-weight: 300;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(rgba(83, 77, 53, 0.468),#fff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 4.5em;
+
+
+} */
+section{
+    padding:3rem 2rem;
+    height: 100%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: black;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: .1rem;
+}
+.home{
+    position: relative;
+    padding: 0;
+}
+.home .slide{
+    padding: 3rem;
+    display: flex;
+    
+    
+   
+   
+}
+.home .slide .content{
+    margin: 60;
+    text-align: left;
+    padding-top: 7rem;
+   width: 700px;
+    
+    
+    
+}
+.home .slide .content span{
+    color: rgba(0, 0, 0, 0.728);
+    display: block;
+    font-size: 5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.7);
+    animation: fadeIn .2s linear backwards;
+    text-transform: uppercase;
+}
+.home .content h3{
+    font-size: 29px;
+    color: rgba(0, 0, 0, 0.365);
+   
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    animation: fadeIn .2s linear backwards .4s;
+}
+.home .slide .content .btn{
+    animation: fadeIn .2s backwards .6s;
+}
+
+
+.center-text h2{
+    color: black;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.center-text span{
+    color: #ee1c47;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    gap: 2rem;
+    
+}
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img{
+    width: 100%;
+    height: 300px;
+    transition: all .40s;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: black;
+}
+.heart-icon:hover{
+    color: #ee1c47;
+}
+.ratting i {
+    color: black;
+    font-size: 100px;
+}
+.price h4{
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p{
+     color: #151515;
+     font-size: 14px;
+     font-weight: 600;
+}
+.client-reviews{
+    background-color: #F3F4F6;
+}
+.reviews{
+    text-align: center;
+}
+.reviews h3{
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+}
+.reviews img{
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+.reviews p{
+    color: #707070;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.reviews h2{
+    font-size: 22px;
+    color: #000;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom:2px ;
+}
+.up-center-text h2{
+    text-align: center;
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.cart img{
+    width: 300px;
+    height: 300px; 
+    border-radius: 5px;
+}
+.update-cart{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1rem;
+
+}
+
+.cart h5{
+    color: black;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.cart p{
+    color: #707070;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.cart h6{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
